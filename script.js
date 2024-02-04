@@ -197,7 +197,7 @@ searchbtn.addEventListener('click',handlesearch);
 
 
 function handlesearch() {
-
-    const x = allTasks.filter((t)=>t.task===search.value)
+    
+    const x = allTasks.filter((t)=>t.task.toLowerCase().includes(search.value.toLowerCase()))
     renderTask(x);
 }
