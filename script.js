@@ -188,3 +188,16 @@ function sort(e){
     const x = allTasks.filter((t)=>t.priority===e.target.value)
     renderTask(x)
 }
+
+
+const search = document.getElementById('srch');
+const searchbtn = document.getElementById('srchbtn');
+
+searchbtn.addEventListener('click',handlesearch);
+
+
+function handlesearch() {
+
+    const x = allTasks.filter((t)=>t.task===search.value)
+    renderTask(x);
+}
