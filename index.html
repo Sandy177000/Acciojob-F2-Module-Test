@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="main">
+      <div class="form">
+        <button id="close-form" onclick="toggleform()">x</button>
+
+        <form class="container">
+          <div class="input">
+            <div>Task</div>
+            <input type="text" id="name" />
+          </div>
+          <div class="input">
+            <div>Due Date</div>
+            <input type="datetime-local" name="day" id="day" />
+          </div>
+          <div class="priority">
+            Priority
+            <div class="low">
+              <input value="low" type="radio" name="priority" id="low" />
+              <span>Low</span>
+            </div>
+            <div class="medium">
+              <input value="medium" type="radio" name="priority" id="medium" />
+              <span>Medium</span>
+            </div>
+            <div class="high">
+              <input value="high" type="radio" name="priority" id="high" />
+              <span>High</span>
+            </div>
+          </div>
+          <div class="statustask">
+            Status
+            <select name="" id="status">
+              <option value="todo">To Do</option>
+              <option value="inprogress">In Progress</option>
+              <option value="done">Done</option>
+            </select>
+          </div>
+          <button id="submit-btn" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="top">
+        <div class="logo">To-Do App</div>
+      </div>
+
+      <div class="center">
+        <button id="add-task" onclick="toggleform()">
+          Add New Task<span>+</span>
+        </button>
+
+        <div class="priority-task">
+            <select name="" id="priority-sort">
+              <option value="low">low</option>
+              <option value="medium">medium</option>
+              <option value="high">high</option>
+            </select>
+          </div>
+<!-- 
+      <div class="status-task">
+        <select name="" id="status-sort">
+          <option value="todo">todo</option>
+          <option value="inprogress">In progress</option>
+          <option value="done">done</option>
+        </select>
+      </div> -->
+      </div>
+      <div class="content">
+        <div class="todo">
+          <div class="title">
+            Todo -
+            <span class="todoCount"></span>
+          </div>
+
+          <div class="todoContainer"></div>
+        </div>
+        <div class="started">
+          <div class="title">
+            Started -
+            <span class="startedCount"></span>
+          </div>
+          <div class="startedContainer"></div>
+        </div>
+
+        <div class="completed">
+            <div class="title">
+              Completed -
+              <span class="completedCount"></span>
+            </div>
+            <div class="completedContainer"></div>
+          </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
